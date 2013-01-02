@@ -1,0 +1,9 @@
+.vim/
+  - 256 color scheme
+  - clang_complete
+
+.vimrc
+  - relative line number (rnu)
+  - clang_complete configuration (use libclang rather than clang)
+  - enable 256 coloring in vim
+  - many others
