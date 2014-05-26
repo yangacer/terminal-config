@@ -1,2 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/yangacer/vmbkp/vmbkp/com/cybozu/vmbkp/control'
+let g:netrw_dirhist_2='/home/yangacer/vmbkp/vmbkp/com/cybozu/vmbkp'
+let g:netrw_dirhist_3='/home/yangacer/vmbkp/vmbkp/com/cybozu/vmbkp/soap'
+let g:netrw_dirhist_4='/home/yangacer/vmbkp/vmbkp/com/cybozu/vmbkp/control'
+let g:netrw_dirhist_5='/home/yangacer/vmbkp/vmbkp/com/cybozu/vmbkp'
+let g:netrw_dirhist_6='/home/yangacer/vmbkp/vmbkp/com/cybozu/vmbkp/util'
+let g:netrw_dirhist_7='/home/yangacer/VMAgent/backup'
+let g:netrw_dirhist_8='/home/yangacer/.vim'
