@@ -1,5 +1,6 @@
 "set pastetoggle=<F12>
 set rnu
+set ruler
 set number
 set nowrap
 set tabstop=4 shiftwidth=4 expandtab smarttab
@@ -13,7 +14,7 @@ colorscheme wombat256
 filetype plugin on
 filetype plugin indent on
 " tab setting per filetype
-autocmd Filetype cpp setlocal ts=4 sts=2 sw=2
+"autocmd Filetype cpp setlocal ts=4 sts=2 sw=2
 autocmd Filetype python setlocal ts=8 sts=4 sw=4
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
 
