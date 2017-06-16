@@ -1,8 +1,8 @@
 [core]
-            editor = vim
+        editor = vim
 [color]
-            ui = true
+        ui = true
 [push]
-            default = current
+        default = current
 [alias]
-        clog = log --pretty='format:%Cgreen%h%Creset %s ... %Cred%an%Creset'
+    clog = log --pretty='format:%Cgreen%h%Creset %s ... %Cred%an%Creset'
