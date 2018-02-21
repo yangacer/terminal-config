@@ -54,3 +54,9 @@ cs add GTAGS
 
 map <C-I> :pyf /usr/local/bin/clang-format.py<CR>
 
+" Open quickfix after grep/make/vimgrep
+augroup QuickFixGrp
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l*    lwindow
+augroup END
