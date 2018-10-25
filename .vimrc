@@ -33,7 +33,7 @@ set showmatch
 set wildmenu
 syntax on
 set t_Co=256
-colorscheme wombat256
+colorscheme wombat
 filetype plugin on
 filetype plugin indent on
 " tab setting per filetype
