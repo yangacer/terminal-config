@@ -89,3 +89,5 @@ endfunction
 
 nnoremap <C-f> :call FilterQFList(0, 1, inputdialog('Keep only file names matching:', ''))<CR>
 nnoremap <C-l> :call FilterQFList(1, 1, inputdialog('Keep only lines matching:', ''))<CR>
+nmap <F7> :cp<CR>
+nmap <F8> :cn<CR>
