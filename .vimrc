@@ -10,7 +10,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 
 " XXX More Plugins go here
 " All of your Plugins must be added before the following line
@@ -30,15 +29,21 @@ set cursorline
 set lazyredraw
 set showmatch
 set wildmenu
+set wildignorecase
+set smartindent
+set splitright
+set splitbelow
+setlocal spell spelllang=en_us
 syntax on
 set t_Co=256
-colorscheme wombat
+colorscheme wombat256
 filetype plugin on
 filetype plugin indent on
 " tab setting per filetype
 autocmd Filetype cpp setlocal ts=4 sts=2 sw=2
 autocmd Filetype python setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 " Continue with the last editing line
 if has("autocmd")
@@ -50,7 +55,7 @@ set csprg=gtags-cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 cs add GTAGS
 
-map <C-I> :pyf /usr/local/bin/clang-format.py<CR>
+map <C-I> :py3f /usr/local/bin/clang-format.py<CR>
 
 " Open quickfix after grep/make/vimgrep
 augroup QuickFixGrp
@@ -88,6 +93,8 @@ function! FilterQFList(type, action, pattern)
 endfunction
 
 nnoremap <C-f> :call FilterQFList(0, 1, inputdialog('Keep only file names matching:', ''))<CR>
+nnoremap <C-F> :call FilterQFList(0, 0, inputdialog('Keep only file names not matching:', ''))<CR>
 nnoremap <C-l> :call FilterQFList(1, 1, inputdialog('Keep only lines matching:', ''))<CR>
+nnoremap <C-L> :call FilterQFList(1, 0, inputdialog('Keep only lines not matching:', ''))<CR>
 nmap <F7> :cp<CR>
 nmap <F8> :cn<CR>
