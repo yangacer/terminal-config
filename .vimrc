@@ -31,8 +31,6 @@ set showmatch
 set wildmenu
 set wildignorecase
 set smartindent
-set splitright
-set splitbelow
 setlocal spell spelllang=en_us
 syntax on
 set t_Co=256
