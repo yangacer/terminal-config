@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
+Plugin 'rust-lang/rust.vim'
 
 " XXX More Plugins go here
 " All of your Plugins must be added before the following line
@@ -38,10 +39,12 @@ colorscheme wombat
 filetype plugin on
 filetype plugin indent on
 " tab setting per filetype
-autocmd Filetype cpp setlocal ts=4 sts=2 sw=2
 autocmd Filetype python setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
+# Need to be updated per system path.
+autocmd Filetype cpp nnoremap <buffer> <C-I> :py3f /usr/share/clang/clang-format-17/clang-format.py<CR>
+autocmd Filetype rust nnoremap <C-I> :RustFmt <CR>
 
 " Continue with the last editing line
 if has("autocmd")
@@ -52,8 +55,6 @@ endif
 set csprg=gtags-cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 cs add GTAGS
-
-map <C-I> :py3f /usr/local/bin/clang-format.py<CR>
 
 " Open quickfix after grep/make/vimgrep
 augroup QuickFixGrp
