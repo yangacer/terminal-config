@@ -38,20 +38,25 @@ set t_Co=256
 colorscheme wombat
 filetype plugin on
 filetype plugin indent on
-" tab setting per filetype
+
+" Custom file types
+au! BufRead,BufNewFile *.log setfiletype log
+
+" Settings per filetype
 autocmd Filetype python setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
-# Need to be updated per system path.
+" Need to be updated per system path.
 autocmd Filetype cpp nnoremap <buffer> <C-I> :py3f /usr/share/clang/clang-format-17/clang-format.py<CR>
 autocmd Filetype rust nnoremap <C-I> :RustFmt <CR>
+autocmd Filetype log setlocal nospell
 
 " Continue with the last editing line
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-                \| exe "normal! g'\"" | endif
-endif
 
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+            \| exe "normal! g'\"" | endif
+
+" Gtags settings
 set csprg=gtags-cscope
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 cs add GTAGS
