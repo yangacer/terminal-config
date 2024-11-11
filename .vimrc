@@ -1,20 +1,11 @@
 set nocompatible
 filetype off
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'godlygeek/tabular'
-Plugin 'rust-lang/rust.vim'
-
-" XXX More Plugins go here
-" All of your Plugins must be added before the following line
-call vundle#end()
+call plug#begin()
+Plug 'tpope/vim-fugitive'
+Plug 'godlygeek/tabular'
+Plug 'rust-lang/rust.vim'
+call plug#end()
 
 set exrc
 set rnu
