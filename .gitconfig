@@ -1,8 +1,11 @@
 [core]
-        editor = vim
+  editor = vim
 [color]
-        ui = true
+  ui = true
 [push]
-        default = current
+  default = current
 [alias]
-    clog = log --pretty='format:%Cgreen%h%Creset %s ... %Cred%an%Creset'
+  # colorful log
+  clog = log --pretty='format:%Cgreen%h%Creset %s ... %Cred%an%Creset'
+  # pull only the current branch from the origin
+  p = !git pull origin $(git branch --show-current)
